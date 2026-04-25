@@ -6,7 +6,8 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -20,6 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo-site {
@@ -59,7 +61,7 @@ body {
 }
 
 .hero-img {
-  width: 1200px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 15px;
@@ -89,10 +91,12 @@ body {
 .cards-grid {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card-clay {
   flex: 1;
+  min-width: 250px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -140,7 +144,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 400px;
+  max-width: 400px;
   margin: auto;
 }
 
@@ -151,4 +155,23 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-container,
+  .nav-links,
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-caption {
+    position: static;
+    color: black;
+    margin-top: 15px;
+  }
+
+  .hero-img {
+    height: 250px;
+  }
 }
